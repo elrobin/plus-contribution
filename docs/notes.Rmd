@@ -1,0 +1,26 @@
+---
+title: "Project status and tasks"
+output: html_notebook
+---
+
+The study has two parts:
+
+1. Relation between authorship order and contribution
+2. Trajectory analysis on author's roles
+
+
+## Part 1
+
+Here we use Bayesian Networks to analyze the probability of making a particular contribution based on author position and a list of control variables. For this we use PLOS data on contributions with a k-fold cross-validation method to calculate the average prediction error rate of the method.
+
+We dataset should be structured as follows:
+
+
+| DOI_author | author_position  | field | contribution | au_number_contrib | total_au | doc_type |
+|------------|------------------|-------|--------------|-------------------|----------|----------|
+| ...        | ...              | ...   | ...          | ...               | ...      | ...      |
+
+### Tasks
+
+1. Create a correlation matrix to find dependencies one by one. How related are contributions with each other?
+2. Create correlation matrix between number of contributions per author/paper combination and contributions. How related is the co-occurrence of contributions with the total number of contributions?
